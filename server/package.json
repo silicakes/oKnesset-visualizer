@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "description": "A gateway for the oKnesset API: https://oknesset.org/api/v2/",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichaelKatz/oKnesset-visualizer.git"
+  },
+  "keywords": [
+    "politics",
+    "Israel",
+    "Knesset",
+    "oKnesset"
+  ],
+  "author": "Michael Katz",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/MichaelKatz/oKnesset-visualizer/issues"
+  },
+  "homepage": "https://github.com/MichaelKatz/oKnesset-visualizer",
+  "dependencies": {
+    "restify": "~2.8.4"
+  }
+}

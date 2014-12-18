@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  
+  <head>
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="styles/style.css" />
+    <link type="text/css" media="screen" rel="stylesheet" href="styles/responsive-tables.css" />
+    
+    
+  </head>
+
+  <body>
+    <div class="container" ng-controller="MainCtrl">
+      <ul>
+        <li ng-repeat="(key, value) in features track by key">
+          <button ng-click="logResponse(key)">{{key}}</button>
+        </li>
+      </ul>
+      <input type="text" ng-model="search" placeholder="type something to search"/>
+      <ul>  
+        <li ng-repeat="article in currentFeature.objects | filter:search"> 
+          <table class="responsive">
+            <thead>
+              <tr>
+                <th ng-repeat="(key, value) in article">{{::key}}<th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td ng-repeat="(key, value) in article">{{::value}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+    </div>
+    
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/responsive-tables.js"></script>
+
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/MainCtrl.js"></script>
+  </body>
+
+</html>
