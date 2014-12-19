@@ -4,14 +4,14 @@
   <head>
     <meta charset="utf-8"> 
     <link rel="stylesheet" href="styles/style.css" />
-    <link type="text/css" media="screen" rel="stylesheet" href="styles/responsive-tables.css" />
-    
+    <link rel="stylesheet" href="bower_components/foundation/css/normalize.css" />
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css" />
     
   </head>
 
   <body>
     <div class="container" ng-controller="MainCtrl">
-      <ul>
+      <ul class="nav">
         <li ng-repeat="(key, value) in features track by key">
           <button ng-click="logResponse(key)">{{key}}</button>
         </li>
@@ -22,7 +22,7 @@
           <table class="responsive">
             <thead>
               <tr>
-                <th ng-repeat="(key, value) in article">{{::key}}<th>
+                <th ng-repeat="(key, value) in article">{{::key}}</th>
               </tr>
             </thead>
             <tbody>
@@ -30,15 +30,15 @@
                 <td ng-repeat="(key, value) in article">{{::value}}</td>
               </tr>
             </tbody>
+            <tfoot></tfoot>
           </table>
         </li>
       </ul>
     </div>
     
-    <script type="text/javascript" src="scripts/jquery.min.js"></script>
-    <script type="text/javascript" src="scripts/responsive-tables.js"></script>
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 
-    <script src="scripts/angular.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/MainCtrl.js"></script>
   </body>
